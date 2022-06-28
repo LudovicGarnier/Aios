@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "99ab1b76-3a56-4ed1-b333-b35df1cb7a1c",
+		"name": "AIOS - banana export",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "OrderController",
+			"item": [
+				{
+					"name": "orders - getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/bananas/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bananas",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "orders - create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"id\": \"45\",\r\n        \"customer\": {\r\n            \"id\": \"1\",\r\n            \"name\": \"John\",\r\n            \"address\": \"15 abbey road\",\r\n            \"zipCode\": \"123456\",\r\n            \"city\": \"London\",\r\n            \"country\": \"England\"\r\n        },\r\n        \"deliveryDate\": \"2022-07-28T18:21:39.582+00:00\",\r\n        \"bananaQuantity\": 125\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/bananas/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bananas",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "orders - update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"id\": \"42\",\r\n        \"customer\": {\r\n            \"id\": \"1\",\r\n            \"name\": \"John\",\r\n            \"address\": \"15 abbey road\",\r\n            \"zipCode\": \"123456\",\r\n            \"city\": \"London\",\r\n            \"country\": \"England\"\r\n        },\r\n        \"deliveryDate\": \"2022-06-28T18:21:39.582+00:00\",\r\n        \"bananaQuantity\": 12,\r\n        \"price\": 5.0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/bananas/orders/42",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bananas",
+								"orders",
+								"42"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "orders - delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"42\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/bananas/orders/42",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bananas",
+								"orders",
+								"42"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "orders - getByCustomer",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/bananas/orders/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bananas",
+								"orders",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CustomerController",
+			"item": [
+				{
+					"name": "customers - getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/bananas/customers",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bananas",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customers - create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"71\",\r\n    \"name\": \"Charles\",\r\n    \"address\": \"25 avenue des Champs Elysées\",\r\n    \"zipCode\": \"75008\",\r\n    \"city\": \"Paris\",\r\n    \"country\": \"FRANCE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/bananas/customers",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bananas",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customers - update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"71\",\r\n    \"name\": \"Charles Trenet\",\r\n    \"address\": \"25 avenue des Champs Elysées\",\r\n    \"zipCode\": \"75008\",\r\n    \"city\": \"Paris\",\r\n    \"country\": \"FRANCE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/bananas/customers/71",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bananas",
+								"customers",
+								"71"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customers - delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"71\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/bananas/customers/71",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bananas",
+								"customers",
+								"71"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
